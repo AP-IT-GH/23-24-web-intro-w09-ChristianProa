@@ -25,3 +25,8 @@ a, a:hover {
   color: #ca8446;
   background-color: #fff;
 }
+.img-small {
+  padding: 0px 20px 20px 0px;
+  width: 100px;
+  height: 100px;
+}
