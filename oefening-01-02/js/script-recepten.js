@@ -4,13 +4,13 @@ Zoek naar de correct url met endpopint waarbij je 20 resultaten van hot-coffee-r
 Test of je de correcte endpoint hebt in Postman. Pas nadien "fetch" je de correcte link naar de API in de code hieronder.
 */
 
-fetch('https://sampleapis.com/coffee/api/hot/?results=20')
+fetch('https://api.sampleapis.com/coffee/hot/?results=20')
   // maak van het antwoord een JSON antwoord
   .then(response => response.json())
   // lees de json uit en zet om naar HTML
   .then(json => {
     // lees het volledige antwoord uit in de console (verwijder deze regel code wanneer je klaar bent)
-    console.log(json);
+    //console.log(json);
     // plaats een section met grid
     let html = '<div class="accordion accordion-flush" id="accordionExample">';
     // plaats van de recepten met naam, ingrediënten, afbeelding,... in HTML
@@ -28,7 +28,7 @@ fetch('https://sampleapis.com/coffee/api/hot/?results=20')
 
               <div id="collapse${i}" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-              <img src="${recipe.image}      " class="float-start" alt="${recipe.title}        "><span class="h6 mt-2">ingrediënten</span>:${recipe.ingredients.join(', ')}            <hr><span class="h6  mt-2">bereiding</span>: ${recipe.description}         </div>
+              <img src="${recipe.image}" class="img-small float-start" alt="${recipe.title} "><span class="h6 mt-2">ingrediënten</span>:${recipe.ingredients.join(', ')}  <hr><span class="h6  mt-2">bereiding</span>: ${recipe.description}         </div>
             </div>
       </div>`;
     }
